@@ -1,0 +1,2 @@
+# CloneableTrait
+PHP Cloneable Trait
