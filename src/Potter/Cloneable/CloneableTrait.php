@@ -13,16 +13,23 @@ trait CloneableTrait
     
     final protected function with(string $id, mixed $entry): CloneableInterface
     {
-        ($clone = $this->getClone())->set($id, $entry);
+        $clone = $this->getClone();
+        if (method_exists($clone, 'set')) {
+            $clone->set($id, $entry);
+            return $clone;
+        }
+        $clone->$id = $entry;
         return $clone;
     }
     
     final protected function without(string $id): CloneableInterface
     {
-        ($clone = $this->getClone())->unset($id);
+        $clone = $this->getClone();
+        if (method_exists($clone, 'unset')) {
+            $clone->unset($id);
+            return $clone;
+        }
+        unset($clone->$id);
         return $clone;
     }
-    
-    abstract protected function set(string $id, mixed $entry): void;
-    abstract protected function unset(string $id): void;
 }
