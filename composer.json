@@ -9,7 +9,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Potter\\CloneableTrait\\": "src/Potter/Cloneable/"
+            "Potter\\Cloneable\\": "src/Potter/Cloneable/"
         }
     },
     "authors": [
