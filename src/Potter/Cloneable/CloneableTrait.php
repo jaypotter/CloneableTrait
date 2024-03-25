@@ -6,12 +6,12 @@ namespace Potter\Cloneable;
 
 trait CloneableTrait 
 {
-    final public function getClone(): CloneableInterface
+    final public function getClone(): static
     {
         return clone $this;
     }
     
-    final protected function with(string $id, mixed $entry): CloneableInterface
+    final protected function with(string $id, mixed $entry): static
     {
         $clone = $this->getClone();
         if (method_exists($clone, 'set')) {
@@ -22,7 +22,7 @@ trait CloneableTrait
         return $clone;
     }
     
-    final protected function without(string $id): CloneableInterface
+    final protected function without(string $id): static
     {
         $clone = $this->getClone();
         if (method_exists($clone, 'unset')) {
