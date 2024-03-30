@@ -6,6 +6,11 @@
         "php": "^8.3",
         "potter/cloneable-interface": "dev-main"
     },
+    "suggest": {
+        "potter/cloneable": "dev-main",
+        "potter/traits": "dev-main",
+        "potter/framework": "dev-main"
+    },
     "license": "MIT",
     "autoload": {
         "psr-4": {
