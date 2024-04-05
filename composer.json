@@ -3,8 +3,7 @@
     "description": "PHP Cloneable Trait",
     "type": "library",
     "require": {
-        "php": "^8.3",
-        "potter/cloneable-interface": "dev-main"
+        "php": "^8.3"
     },
     "suggest": {
         "potter/cloneable": "dev-main",
@@ -23,5 +22,5 @@
             "email": "j@ypotter.ca"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
